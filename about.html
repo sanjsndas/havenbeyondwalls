@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About · Haven Beyond Walls — Interior Design & Architecture Journal</title>
+    <meta name="description" content="About Haven Beyond Walls — an independent editorial publication exploring interior design, residential architecture, materials, lighting, and the art of making space.">
+    <link rel="canonical" href="https://havenbeyondwalls.com/about">
+    <!-- Open Graph -->
+    <meta property="og:title" content="About · Haven Beyond Walls — Interior Design & Architecture Journal">
+    <meta property="og:description" content="Independent editorial on interior design, architecture, materials and the art of living well.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://havenbeyondwalls.com/about">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80">
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Haven Beyond Walls",
+      "url": "https://havenbeyondwalls.com/about",
+      "description": "Independent editorial on interior design, architecture, materials and the art of living well.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Haven Beyond Walls"
+      }
+    }
+    </script>
+    <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #faf9f7;
+            color: #1e1e1e;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 2.6rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.3rem; }
+        h4 { font-size: 1.05rem; }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            color: #2a2a2a;
+        }
+
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 48px;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .layout-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+        }
+
+        /* HEADER */
+        .site-header {
+            border-bottom: 1px solid #e0ddd8;
+            background: #faf9f7;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 0;
+        }
+
+        .logo {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: -0.03em;
+            color: #1e1e1e;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-mark {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background: #1e1e1e;
+            color: #faf9f7;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            line-height: 28px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 28px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .main-nav a {
+            color: #555;
+            transition: color 0.2s;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #1e1e1e;
+        }
+
+        @media (max-width: 700px) {
+            .main-nav {
+                display: none;
+            }
+            .mobile-toggle {
+                display: block;
+            }
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: 1px solid #ccc;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* SEARCH BAR */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            border: 1px solid #e0ddd8;
+            border-radius: 40px;
+            padding: 6px 16px;
+            max-width: 260px;
+            width: 100%;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.85rem;
+            width: 100%;
+            background: transparent;
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #888;
+        }
+
+        @media (max-width: 700px) {
+            .search-bar {
+                max-width: 160px;
+            }
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            margin: 48px 0 32px;
+            border-bottom: 2px solid #1e1e1e;
+            padding-bottom: 20px;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+        }
+
+        .page-header .subhead {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1rem;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 400;
+        }
+
+        @media (max-width: 650px) {
+            .page-header h1 { font-size: 2rem; }
+        }
+
+        /* ABOUT CONTENT */
+        .about-content {
+            background: #fff;
+            border: 1px solid #e8e4de;
+            border-radius: 12px;
+            padding: 44px 48px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 650px) {
+            .about-content {
+                padding: 24px 20px;
+            }
+        }
+
+        .about-content h2 {
+            font-size: 1.7rem;
+            margin-top: 36px;
+            margin-bottom: 16px;
+        }
+
+        .about-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .about-content h3 {
+            font-size: 1.2rem;
+            margin-top: 28px;
+            margin-bottom: 12px;
+        }
+
+        .about-content p {
+            font-size: 1.05rem;
+            color: #333;
+        }
+
+        .about-content img {
+            border-radius: 8px;
+            margin: 28px 0;
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+        }
+
+        .about-content blockquote {
+            border-left: 3px solid #1e1e1e;
+            padding-left: 20px;
+            margin: 24px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .about-content ul {
+            margin: 16px 0 24px 24px;
+            color: #333;
+        }
+
+        .about-content ul li {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .editor-card {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            background: #f8f6f2;
+            border-radius: 10px;
+            padding: 28px 32px;
+            margin: 32px 0 8px;
+        }
+
+        .editor-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0;
+            flex-shrink: 0;
+        }
+
+        .editor-card .editor-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .editor-card .editor-info p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 550px) {
+            .editor-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px 20px;
+            }
+            .editor-card img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* SIDEBAR (reused from homepage) */
+        .sidebar {
+            position: sticky;
+            top: 96px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .sidebar-widget {
+            background: #fff;
+            border: 1px solid #e8e4de;
+            border-radius: 10px;
+            padding: 24px 24px 28px;
+        }
+
+        .sidebar-widget h4 {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #888;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 12px;
+        }
+
+        .popular-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #f0ede8;
+        }
+
+        .popular-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .popular-item .num {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #ccc;
+            line-height: 1;
+            min-width: 28px;
+        }
+
+        .popular-item h5 {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.92rem;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+
+        .popular-item span {
+            font-size: 0.75rem;
+            color: #999;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .newsletter-widget {
+            background: #1e1e1e;
+            color: #faf9f7;
+            border: none;
+        }
+
+        .newsletter-widget h4 {
+            color: #bbb;
+            border-bottom-color: #333;
+        }
+
+        .newsletter-widget p {
+            color: #ccc;
+            font-size: 0.92rem;
+        }
+
+        .newsletter-widget input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #444;
+            background: #2a2a2a;
+            color: #fff;
+            border-radius: 6px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .newsletter-widget button {
+            width: 100%;
+            padding: 12px;
+            background: #faf9f7;
+            color: #1e1e1e;
+            border: none;
+            border-radius: 6px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .newsletter-widget button:hover {
+            background: #e8e4de;
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: #1e1e1e;
+            color: #aaa;
+            padding: 56px 0 32px;
+            margin-top: 64px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 750px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-brand {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #faf9f7;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand + p {
+            font-size: 0.9rem;
+            color: #888;
+            max-width: 300px;
+        }
+
+        .footer-col h5 {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #faf9f7;
+            margin-bottom: 16px;
+        }
+
+        .footer-col a {
+            display: block;
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #faf9f7;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.82rem;
+            color: #777;
+        }
+
+        .footer-bottom a {
+            color: #777;
+            margin-left: 16px;
+        }
+
+        .footer-bottom a:hover {
+            color: #ccc;
+        }
+
+        /* UTILITY */
+        .hidden {
+            display: none !important;
+        }
+
+        /* MOBILE MENU */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: #faf9f7;
+            z-index: 200;
+            padding: 80px 32px 32px;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1e1e1e;
+        }
+
+        .mobile-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* MODALS (for footer links & contact) */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 300;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #faf9f7;
+            max-width: 720px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            border-radius: 12px;
+            padding: 40px 44px;
+            position: relative;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .modal-content p {
+            font-size: 1rem;
+            color: #444;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .modal-close:hover {
+            color: #1e1e1e;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">H</span> Haven Beyond Walls
+        </a>
+        <nav class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="categories.html">Categories</a></li>
+        </nav>
+        <div style="display:flex; align-items:center; gap:12px;">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search articles..." oninput="filterArticles()">
+                <button onclick="filterArticles()" aria-label="Search">🔍</button>
+            </div>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms Of Privacy</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookies.html">Cookies Policy</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="categories.html">Categories</a>
+</div>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main class="container">
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="subhead">Who we are</div>
+        <h1>About Haven Beyond Walls</h1>
+    </div>
+
+    <!-- Layout Grid: Content + Sidebar -->
+    <div class="layout-grid">
+
+        <!-- LEFT COLUMN: About Content -->
+        <div id="aboutColumn">
+
+            <div class="about-content">
+                <p><strong>Haven Beyond Walls</strong> is an independent editorial publication dedicated to interior design, residential architecture, and the quiet art of making a home. We publish in-depth articles, practical guides, and critical perspectives on the spaces we inhabit — from the materials that shape them to the light that fills them.</p>
+
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
+                     alt="Modern concrete and glass residential house with warm interior lighting at dusk">
+
+                <h2>Our Story</h2>
+                <p>Founded in 2019 by Elena Marchetti, a former interior designer and architectural writer, Haven Beyond Walls began as a personal notebook — a place to collect ideas, images, and observations about why some spaces feel right and others don't. That notebook grew into a journal, and the journal grew into a community of readers who care about the same thing: thoughtful design.</p>
+                <p>We are not affiliated with any design firm, product brand, or institution. Our only loyalty is to our readers. Every article is written by humans, fact-checked, and edited for clarity. We do not use AI-generated filler. We do not accept sponsored content disguised as editorial. We simply write about what we find meaningful.</p>
+
+                <blockquote>"Good design is not about luxury. It's about thoughtfulness — the quiet decisions that make a space feel inevitable." — Elena Marchetti, Founder</blockquote>
+
+                <h2>What We Write About</h2>
+                <p>Our editorial focus spans a deliberately narrow but deep territory. We believe that covering fewer topics with more rigor serves our readers better than chasing every trend.</p>
+                <ul>
+                    <li><strong>Interior Design</strong> — spatial composition, colour theory, texture, and the psychology of rooms.</li>
+                    <li><strong>Residential Architecture</strong> — houses, apartments, renovations, and the structural decisions that shape daily life.</li>
+                    <li><strong>Materials</strong> — wood, concrete, stone, metal, glass, and the honest expression of how things are made.</li>
+                    <li><strong>Lighting</strong> — natural and artificial, from window orientation to the warmth of a bulb.</li>
+                    <li><strong>Space Planning</strong> — circulation, zoning, storage, and the invisible logic of a well-planned home.</li>
+                    <li><strong>Furniture &amp; Objects</strong> — pieces that endure, both functionally and aesthetically.</li>
+                </ul>
+
+                <h2>Our Approach</h2>
+                <p>We believe that design writing should be useful, not merely inspirational. Every article aims to leave you with something you can apply — a principle, a measurement, a way of seeing. We favour clarity over jargon, substance over style, and long-form depth over listicle brevity.</p>
+                <p>We also believe that good design is accessible. While we admire high-end architecture and bespoke interiors, our advice is written for real people living in real spaces — renters, first-time homeowners, and anyone who wants their surroundings to feel more intentional.</p>
+
+                <h3>Editorial Independence</h3>
+                <p>Haven Beyond Walls is reader-supported. We do not run display advertising, and we do not accept payment for coverage. When we mention a product, material, or practitioner, it is because we believe it is relevant to the story — never because we were paid to include it. Our newsletter is free, and our archive is open to all.</p>
+
+                <h2>Meet the Editor</h2>
+                <div class="editor-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80"
+                         alt="Portrait of Elena Marchetti, editor of Haven Beyond Walls">
+                    <div class="editor-info">
+                        <h4>Elena Marchetti</h4>
+                        <p>Elena is an architectural writer and former interior designer based in Milan. She spent a decade designing residential interiors before turning to journalism, and she believes good design is about how a space makes you feel — not just how it looks. She writes every article on this site.</p>
+                    </div>
+                </div>
+
+                <h2>Contact &amp; Corrections</h2>
+                <p>We welcome thoughtful correspondence from readers, designers, and architects. If you have a question about an article, a tip for a story, or a correction, please write to us at <strong>editorial@havenbeyondwalls.com</strong>. We read every message and aim to respond within 3–5 business days.</p>
+                <p style="color:#888; font-size:0.95rem; margin-top:24px;">Haven Beyond Walls · Via Brera 12, 20121 Milano, Italy · Est. 2019</p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Sidebar -->
+        <aside class="sidebar" id="sidebar">
+
+            <!-- Popular Articles -->
+            <div class="sidebar-widget">
+                <h4>Most Read</h4>
+                <div class="popular-item">
+                    <div class="num">01</div>
+                    <div>
+                        <h5>The Quiet Power of Concrete in Modern Homes</h5>
+                        <span>12 min read</span>
+                    </div>
+                </div>
+                <div class="popular-item">
+                    <div class="num">02</div>
+                    <div>
+                        <h5>How to Read a Floor Plan Like an Architect</h5>
+                        <span>9 min read</span>
+                    </div>
+                </div>
+                <div class="popular-item">
+                    <div class="num">03</div>
+                    <div>
+                        <h5>Designing with Natural Light: A Room-by-Room Guide</h5>
+                        <span>10 min read</span>
+                    </div>
+                </div>
+                <div class="popular-item">
+                    <div class="num">04</div>
+                    <div>
+                        <h5>The Honest Materials: Why Wood Still Wins</h5>
+                        <span>7 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About the Editor (short) -->
+            <div class="sidebar-widget">
+                <h4>Editor's Note</h4>
+                <p style="font-size:0.92rem; color:#555;">Haven Beyond Walls is edited by <strong>Elena Marchetti</strong>, an architectural writer and former interior designer based in Milan. She believes good design is about how a space makes you feel — not just how it looks.</p>
+                <p style="font-size:0.82rem; color:#999; margin-bottom:0;">Est. 2019 · Independent</p>
+            </div>
+
+            <!-- Newsletter Widget -->
+            <div class="sidebar-widget newsletter-widget">
+                <h4>The Weekly Edit</h4>
+                <p>One thoughtful email each Sunday. Articles, ideas, and spaces worth knowing.</p>
+                <input type="email" placeholder="Your email address" id="newsletterEmail">
+                <button onclick="subscribeNewsletter()">Subscribe</button>
+                <p style="font-size:0.75rem; color:#777; margin-top:10px; margin-bottom:0;">No spam. Unsubscribe anytime.</p>
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">Haven Beyond Walls</div>
+                <p>An independent editorial publication exploring interior design, architecture, materials, and the art of making space. Published since 2019.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Topics</h5>
+                <a href="index.html">Interior Design</a>
+                <a href="index.html">Architecture</a>
+                <a href="index.html">Materials</a>
+                <a href="index.html">Lighting</a>
+            </div>
+            <div class="footer-col">
+                <h5>Information</h5>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="#" onclick="openModal('privacy')">Privacy Policy</a>
+                <a href="#" onclick="openModal('terms')">Terms of Use</a>
+                <a href="#" onclick="openModal('cookie')">Cookie Policy</a>
+            </div>
+            <div class="footer-col">
+                <h5>Follow</h5>
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">RSS</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Haven Beyond Walls. All rights reserved.</span>
+            <div>
+                <a href="#" onclick="openModal('privacy')">Privacy</a>
+                <a href="#" onclick="openModal('terms')">Terms</a>
+                <a href="#" onclick="openModal('cookie')">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== MODALS ========== -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content" id="modalContent">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<script>
+    // ========== MOBILE MENU ==========
+    function toggleMobileMenu() {
+        document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    // ========== NEWSLETTER ==========
+    function subscribeNewsletter() {
+        const email = document.getElementById('newsletterEmail').value.trim();
+        if (!email || !email.includes('@')) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        alert('Thank you for subscribing to The Weekly Edit. Check your inbox for a confirmation.');
+        document.getElementById('newsletterEmail').value = '';
+    }
+
+    // ========== SEARCH (dummy function to keep header consistent) ==========
+    function filterArticles() {
+        // On the about page, search simply redirects to homepage with query
+        const query = document.getElementById('searchInput').value.trim();
+        if (query) {
+            window.location.href = 'index.html?search=' + encodeURIComponent(query);
+        }
+    }
+
+    // ========== MODALS (for footer legal links) ==========
+    function openModal(type) {
+        const overlay = document.getElementById('modalOverlay');
+        const body = document.getElementById('modalBody');
+        let html = '';
+
+        if (type === 'privacy') {
+            html = `
+                <h2>Privacy Policy</h2>
+                <p><strong>Last updated:</strong> January 2025</p>
+                <p>Haven Beyond Walls respects your privacy. This policy explains what data we collect and how we use it.</p>
+                <h3 style="margin-top:20px; font-size:1.1rem;">Information we collect</h3>
+                <p>We collect email addresses only when you voluntarily subscribe to our newsletter. We use privacy-respecting analytics that do not track individual users across sessions.</p>
+                <h3 style="margin-top:20px; font-size:1.1rem;">How we use your information</h3>
+                <p>Email addresses are used solely to send our weekly newsletter. We never sell, rent, or share your data with third parties.</p>
+                <h3 style="margin-top:20px; font-size:1.1rem;">Cookies</h3>
+                <p>We use minimal, functional cookies to remember your preferences (such as category filters). No advertising cookies are used.</p>
+                <h3 style="margin-top:20px; font-size:1.1rem;">Your rights</h3>
+                <p>You may request access to, correction of, or deletion of your personal data at any time by contacting privacy@havenbeyondwalls.com.</p>
+            `;
+        } else if (type === 'terms') {
+            html = `
+                <h2>Terms of Use</h2>
+                <p><strong>Last updated:</strong> January 2025</p>
+                <p>By accessing Haven Beyond Walls, you agree to these terms.</p>
+                <h3 style="margin-top:20px; font-size:1.1rem;">Content</h3>
+                <p>All articles, images, and graphics on this site are the property of Haven Beyond Walls or their respective creators. You may share excerpts with attribution and a link back to the original article. Republishing full articles without permission is prohibited.</p>
+                <h3 style="margin-top:20px; font-size:1.1rem;">Accuracy</h3>
+                <p>We strive for accuracy but make no warranties regarding the completeness or reliability of any information. Design and construction decisions should always involve qualified professionals.</p>
+                <h3 style="margin-top:20px; font-size:1.1rem;">External links</h3>
+                <p>We are not responsible for the content of external sites linked from our articles.</p>
+            `;
+        } else if (type === 'cookie') {
+            html = `
+                <h2>Cookie Policy</h2>
+                <p><strong>Last updated:</strong> January 2025</p>
+                <p>Haven Beyond Walls uses a minimal number of cookies to ensure the site functions properly.</p>
+                <h3 style="margin-top:20px; font-size:1.1rem;">Essential cookies</h3>
+                <p>We store your category filter preference in a session cookie so that the site remembers your choice while you browse. This cookie expires when you close your browser.</p>
+                <h3 style="margin-top:20px; font-size:1.1rem;">Analytics</h3>
+                <p>We use a privacy-first, cookie-less analytics service that does not collect personal data or track you across websites.</p>
+                <h3 style="margin-top:20px; font-size:1.1rem;">Managing cookies</h3>
+                <p>You can disable cookies in your browser settings at any time. Doing so will not affect your ability to read articles.</p>
+            `;
+        }
+
+        body.innerHTML = html;
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('modalOverlay').classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    // Close modal on overlay click
+    document.getElementById('modalOverlay').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+    });
+
+    // Close modal on Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+    });
+</script>
+
+</body>
+</html>

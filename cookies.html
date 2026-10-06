@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Policy — Haven Beyond Walls</title>
+    <meta name="description" content="Cookies Policy for Haven Beyond Walls — how we use cookies and similar technologies, and how you can control them.">
+    <link rel="canonical" href="https://havenbeyondwalls.com/cookies.html">
+    <meta property="og:title" content="Cookies Policy — Haven Beyond Walls">
+    <meta property="og:description" content="Learn how Haven Beyond Walls uses cookies and how to manage your preferences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://havenbeyondwalls.com/cookies.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80">
+    <style>
+        /* RESET & BASE — identical to main */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #faf9f7;
+            color: #1e1e1e;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 2.6rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.3rem; }
+        h4 { font-size: 1.05rem; }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            color: #2a2a2a;
+        }
+
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* HEADER — same as main */
+        .site-header {
+            border-bottom: 1px solid #e0ddd8;
+            background: #faf9f7;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 0;
+        }
+
+        .logo {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: -0.03em;
+            color: #1e1e1e;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-mark {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background: #1e1e1e;
+            color: #faf9f7;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            line-height: 28px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 28px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            list-style: none;
+        }
+
+        .main-nav a {
+            color: #555;
+            transition: color 0.2s;
+        }
+
+        .main-nav a:hover {
+            color: #1e1e1e;
+        }
+
+        @media (max-width: 700px) {
+            .main-nav {
+                display: none;
+            }
+            .mobile-toggle {
+                display: block;
+            }
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: 1px solid #ccc;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* Search bar */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            border: 1px solid #e0ddd8;
+            border-radius: 40px;
+            padding: 6px 16px;
+            max-width: 260px;
+            width: 100%;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.85rem;
+            width: 100%;
+            background: transparent;
+        }
+
+        .search-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #888;
+        }
+
+        @media (max-width: 700px) {
+            .search-bar {
+                max-width: 160px;
+            }
+        }
+
+        /* Mobile menu overlay */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: #faf9f7;
+            z-index: 200;
+            padding: 80px 32px 32px;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1e1e1e;
+        }
+
+        .mobile-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* ===== COOKIES PAGE SPECIFIC ===== */
+        .cookies-hero {
+            padding: 60px 0 32px;
+            border-bottom: 1px solid #e0ddd8;
+        }
+
+        .cookies-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 12px;
+            max-width: 700px;
+        }
+
+        .cookies-hero p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+        }
+
+        .cookies-content {
+            max-width: 860px;
+            margin: 48px auto 64px;
+            background: #fff;
+            border: 1px solid #e8e4de;
+            border-radius: 16px;
+            padding: 48px 56px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+        }
+
+        @media (max-width: 700px) {
+            .cookies-content {
+                padding: 28px 20px;
+                margin: 32px auto 48px;
+            }
+            .cookies-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        .cookies-content h2 {
+            font-size: 1.7rem;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cookies-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .cookies-content h3 {
+            font-size: 1.2rem;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: #1e1e1e;
+        }
+
+        .cookies-content p {
+            font-size: 1.02rem;
+            color: #2a2a2a;
+            margin-bottom: 1.1rem;
+        }
+
+        .cookies-content ul, 
+        .cookies-content ol {
+            margin: 0 0 1.4rem 1.6rem;
+            padding-left: 0.4rem;
+        }
+
+        .cookies-content li {
+            font-size: 1.02rem;
+            color: #2a2a2a;
+            margin-bottom: 0.5rem;
+        }
+
+        .cookies-content a {
+            border-bottom: 1px solid #c0bbb2;
+            transition: border-color 0.2s;
+            color: #1e1e1e;
+            font-weight: 500;
+        }
+
+        .cookies-content a:hover {
+            border-color: #1e1e1e;
+        }
+
+        .cookies-meta {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            padding: 16px 0 8px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.88rem;
+            color: #666;
+        }
+
+        .cookies-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .cookies-meta strong {
+            color: #1e1e1e;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: #f6f4f0;
+            border-left: 4px solid #1e1e1e;
+            padding: 20px 26px;
+            border-radius: 8px;
+            margin: 28px 0;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-box strong {
+            color: #1e1e1e;
+        }
+
+        /* cookie table */
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0 32px;
+            font-size: 0.95rem;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .cookie-table th {
+            text-align: left;
+            background: #f2efe9;
+            padding: 12px 14px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #1e1e1e;
+            border-bottom: 1px solid #ddd8d0;
+        }
+
+        .cookie-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+            color: #2a2a2a;
+        }
+
+        .cookie-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .cookie-table code {
+            font-size: 0.85rem;
+            background: #f0ede8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* FOOTER — same as main */
+        .site-footer {
+            background: #1e1e1e;
+            color: #aaa;
+            padding: 56px 0 32px;
+            margin-top: 64px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 750px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-brand {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #faf9f7;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand + p {
+            font-size: 0.9rem;
+            color: #888;
+            max-width: 300px;
+        }
+
+        .footer-col h5 {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #faf9f7;
+            margin-bottom: 16px;
+        }
+
+        .footer-col a {
+            display: block;
+            font-size: 0.9rem;
+            color: #999;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #faf9f7;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.82rem;
+            color: #777;
+        }
+
+        .footer-bottom a {
+            color: #777;
+            margin-left: 16px;
+        }
+
+        .footer-bottom a:hover {
+            color: #ccc;
+        }
+
+        /* Modals (same, minimal) */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 300;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #faf9f7;
+            max-width: 720px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            border-radius: 12px;
+            padding: 40px 44px;
+            position: relative;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .modal-content p {
+            font-size: 1rem;
+            color: #444;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .modal-close:hover {
+            color: #1e1e1e;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">H</span> Haven Beyond Walls
+        </a>
+        <nav class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms Of Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookies Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="categories.html">Categories</a></li>
+        </nav>
+        <div style="display:flex; align-items:center; gap:12px;">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search articles..." oninput="filterArticles()">
+                <button onclick="filterArticles()" aria-label="Search">🔍</button>
+            </div>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="cookies.html">Cookies</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="categories.html">Categories</a>
+</div>
+
+<!-- ========== MAIN COOKIES CONTENT ========== -->
+<main>
+    <div class="container">
+
+        <!-- Cookies Hero -->
+        <section class="cookies-hero">
+            <h1>Cookies Policy</h1>
+            <p>Last updated: 15 March 2025 · This policy explains how Haven Beyond Walls uses cookies and similar tracking technologies.</p>
+        </section>
+
+        <!-- Cookies Content -->
+        <div class="cookies-content">
+
+            <div class="cookies-meta">
+                <span><strong>Effective:</strong> 15 March 2025</span>
+                <span><strong>Applies to:</strong> havenbeyondwalls.com</span>
+                <span><strong>Contact:</strong> privacy@havenbeyondwalls.com</span>
+            </div>
+
+            <p>This Cookies Policy describes how Haven Beyond Walls (“we”, “us”, “our”) uses cookies and similar technologies on <a href="https://havenbeyondwalls.com">havenbeyondwalls.com</a> (the “Site”). It should be read alongside our <a href="privacy.html">Privacy Policy</a>, which explains how we handle your personal data more broadly.</p>
+
+            <div class="highlight-box">
+                <p><strong>Plain-language summary:</strong> We use a small number of cookies to make the Site work and to understand which articles are read. We do not use advertising cookies or sell your data. You can control or delete cookies through your browser settings at any time.</p>
+            </div>
+
+            <h2>1. What are cookies?</h2>
+            <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, to remember your preferences, and to provide information to the site owners.</p>
+            <p>Cookies can be “persistent” (they remain on your device for a set period or until you delete them) or “session” cookies (they are deleted when you close your browser). They can also be “first-party” (set by us) or “third-party” (set by another domain, such as an analytics service).</p>
+
+            <h2>2. How we use cookies</h2>
+            <p>We use cookies for the following purposes:</p>
+            <ul>
+                <li><strong>Strictly necessary cookies:</strong> These are essential for the Site to function, such as remembering your cookie preferences or enabling basic security features. Without these, parts of the Site may not work.</li>
+                <li><strong>Analytics cookies:</strong> These help us understand how visitors interact with the Site — for example, which pages are most popular and how long people stay. We use this information in aggregate form to improve our content and user experience.</li>
+                <li><strong>Preference cookies:</strong> These remember choices you make (such as language or display settings) to provide a more personalised experience.</li>
+            </ul>
+            <p>We do <strong>not</strong> use advertising or targeting cookies, and we do not track you across other websites.</p>
+
+            <h2>3. Cookies we use</h2>
+            <p>The table below lists the specific cookies we may set, along with their purpose and duration.</p>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>hbw_consent</code></td>
+                        <td>Strictly necessary</td>
+                        <td>Stores your cookie consent preferences so we don't ask again on every visit.</td>
+                        <td>12 months</td>
+                    </tr>
+                    <tr>
+                        <td><code>hbw_session</code></td>
+                        <td>Strictly necessary</td>
+                        <td>Maintains your session while you browse the Site (e.g., for form submissions).</td>
+                        <td>Session</td>
+                    </tr>
+                    <tr>
+                        <td><code>_ga</code></td>
+                        <td>Analytics (third-party)</td>
+                        <td>Used by Google Analytics to distinguish unique users and calculate visit statistics. IP anonymisation is enabled.</td>
+                        <td>2 years</td>
+                    </tr>
+                    <tr>
+                        <td><code>_gid</code></td>
+                        <td>Analytics (third-party)</td>
+                        <td>Used by Google Analytics to distinguish users for reporting purposes.</td>
+                        <td>24 hours</td>
+                    </tr>
+                    <tr>
+                        <td><code>hbw_prefs</code></td>
+                        <td>Preference</td>
+                        <td>Remembers small interface preferences, such as whether you've dismissed a notice.</td>
+                        <td>6 months</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>We may update this table from time to time as our use of cookies evolves. Please check back periodically for the latest information.</p>
+
+            <h2>4. Third-party cookies</h2>
+            <p>Some cookies are placed by third-party services that appear on our pages. For example, we use Google Analytics to help us understand traffic. Google may set its own cookies (such as <code>_ga</code> and <code>_gid</code>) and process data in accordance with its own privacy policy. We have configured Google Analytics with IP anonymisation to reduce the identifiability of visitors.</p>
+            <p>We do not control third-party cookies. You can learn more about how to manage them by visiting the relevant third party’s privacy policy or your browser’s help pages.</p>
+
+            <h2>5. How to control cookies</h2>
+            <p>You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by:</p>
+            <ul>
+                <li><strong>Browser settings:</strong> Most web browsers allow you to control cookies through their settings. You can usually find these in the “Options” or “Preferences” menu of your browser. You can set your browser to block or delete cookies, or to alert you when cookies are being sent.</li>
+                <li><strong>Opt-out tools:</strong> For analytics cookies, you can use the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</li>
+                <li><strong>Our consent banner:</strong> When you first visit the Site, you may see a banner asking for your cookie consent. You can change your preferences at any time by clearing your browser cookies and revisiting the Site, or by using the controls described above.</li>
+            </ul>
+            <p>Please note that if you disable cookies, some features of the Site may not function properly, and your experience may be less personalised.</p>
+
+            <h2>6. Do Not Track signals</h2>
+            <p>Some browsers have a “Do Not Track” (DNT) feature that lets you signal that you do not want to be tracked. Our Site does not currently respond to DNT signals, as there is no common industry standard for how to interpret them. We do, however, limit tracking to the analytics described above and do not engage in cross-site tracking for advertising.</p>
+
+            <h2>7. Changes to this Cookies Policy</h2>
+            <p>We may update this Cookies Policy from time to time to reflect changes in technology or legal requirements. Any changes will be posted on this page with an updated “Last updated” date. We encourage you to review this page periodically to stay informed about how we use cookies.</p>
+
+            <h2>8. Contact us</h2>
+            <p>If you have any questions about this Cookies Policy or our use of cookies, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:privacy@havenbeyondwalls.com">privacy@havenbeyondwalls.com</a></li>
+                <li><strong>Postal address:</strong> Haven Beyond Walls, Via Brera 12, 20121 Milano, Italy</li>
+                <li><strong>Contact form:</strong> <a href="contact.html">havenbeyondwalls.com/contact</a></li>
+            </ul>
+
+            <div class="highlight-box" style="margin-top: 36px;">
+                <p><strong>Your privacy matters.</strong> We keep our cookie use minimal and transparent. If anything is unclear, just reach out — we’re happy to explain.</p>
+            </div>
+
+            <p style="margin-top: 24px; font-size: 0.92rem; color: #777; font-family: 'Helvetica Neue', Arial, sans-serif;">This document was last updated on 15 March 2025 and is effective immediately.</p>
+
+        </div>
+    </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">Haven Beyond Walls</div>
+                <p>An independent editorial publication exploring interior design, architecture, materials, and the art of making space. Published since 2019.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Topics</h5>
+                <a href="index.html">Interior Design</a>
+                <a href="index.html">Architecture</a>
+                <a href="index.html">Materials</a>
+                <a href="index.html">Lighting</a>
+            </div>
+            <div class="footer-col">
+                <h5>Information</h5>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="cookies.html">Cookie Policy</a>
+            </div>
+            <div class="footer-col">
+                <h5>Follow</h5>
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">RSS</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Haven Beyond Walls. All rights reserved.</span>
+            <div>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="cookies.html">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Simple modal (consistent) -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content" id="modalContent">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<script>
+    // ========== MOBILE MENU ==========
+    function toggleMobileMenu() {
+        document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    // ========== SEARCH (redirects to home with query) ==========
+    function filterArticles() {
+        const query = document.getElementById('searchInput').value.trim();
+        if (query) {
+            window.location.href = 'index.html?search=' + encodeURIComponent(query);
+        }
+    }
+
+    // ========== MODALS (minimal, for consistency) ==========
+    function openModal(type) {
+        const overlay = document.getElementById('modalOverlay');
+        const body = document.getElementById('modalBody');
+        let html = '';
+
+        if (type === 'about') {
+            html = `<h2>About Haven Beyond Walls</h2><p>Independent editorial on interior design and architecture. Founded 2019 in Milan.</p>`;
+        } else if (type === 'privacy') {
+            html = `<h2>Privacy Policy</h2><p>This is the privacy policy summary. The full policy is on this page.</p>`;
+        } else if (type === 'terms') {
+            html = `<h2>Terms of Use</h2><p>By using this site you agree to our terms.</p>`;
+        } else if (type === 'cookie') {
+            html = `<h2>Cookie Policy</h2><p>We use minimal functional cookies.</p>`;
+        }
+
+        body.innerHTML = html;
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        document.getElementById('modalOverlay').classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('modalOverlay').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    // Update copyright year dynamically (optional)
+    // (already set to 2025 in footer)
+</script>
+
+</body>
+</html>
